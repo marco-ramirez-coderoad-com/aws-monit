@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+
+	<title>Untitled 1</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        
+        function rel_frame(frame_id,img_id){
+            document.getElementById(frame_id).contentWindow.location.reload();
+            document.getElementById(img_id).src = 'images/ajax-loader.gif';
+        }
+        
+        function frame_onload(img_id){
+            document.getElementById(img_id).src = 'images/reload_icon_grey.gif';
+        }
+        
+    </script>
+</head>
+
+<body>
+
+<!--TCPROJECTS-->
+<div id="titulo">TC-Project</div>
+<div id="head">
+<div class="reload" onclick="javascript:rel_frame('tcpframe','reloadimg1')" alt='Loading'><img id="reloadimg1" src=""/></div>
+    <table id='instance-head'>
+        <tr>
+            <th class='Iname'>Instance Name</th>
+            <th class='IState'>State</th>
+            <th class='IID'>Instance Id</th>
+            <th class='IDNS'>Private DNS Name</th>
+            <th class='Icontrol'>CONTROL</th>
+        </tr>
+    </table>
+</div>
+<iframe class="wraper1" id="tcpframe" src="accounts/TC-projects.php" onload="frame_onload('reloadimg1')"></iframe>
+
+<!--RIOT-->
+<div id="titulo">RIoT</div>
+<div id="head">
+<div class="reload" onclick="javascript:rel_frame('riotframe','reloadimg2')" alt='loading' ><img id="reloadimg2" src=""/></div>
+    <table id='instance-head'>
+        <tr>
+            <th class='Iname'>Instance Name</th>
+            <th class='IState'>State</th>
+            <th class='IID'>Instance Id</th>
+            <th class='IDNS'>Private DNS Name</th>
+            <th class='Icontrol'>CONTROL</th>
+        </tr>
+    </table>
+</div>
+<iframe class="wraper1" id="riotframe" src="accounts/RIoT.php" onload="frame_onload('reloadimg2')"></iframe>
+
+<!--MEMO-->
+<div id="titulo">MEMO-TCP</div>
+<div id="head">
+<div class="reload" onclick="javascript:rel_frame('memoframe','reloadimg3')" alt='Loading' ><img id="reloadimg3" src=""/></div>
+    <table id='instance-head'>
+        <tr>
+            <th class='Iname'>Instance Name</th>
+            <th class='IState'>State</th>
+            <th class='IID'>Instance Id</th>
+            <th class='IDNS'>Private DNS Name</th>
+            <th class='Icontrol'>CONTROL</th>
+        </tr>
+    </table>
+</div>
+<iframe class="wraper1" id="memoframe" src="accounts/memo.php" onload="frame_onload('reloadimg3')"></iframe>
+</body>
+</html>
