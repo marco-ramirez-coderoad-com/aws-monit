@@ -7,7 +7,7 @@
 <script type="text/javascript">
 function display(Iid){
     alert(Iid);
-    var string1 = 'WAl3HBTtdqSGkJWxhyozbflcurkPW6az8WkPVZ6w';
+    var string1 = 'WAl3HBTtdqSGkJWxhyozbflcurkPW6az8WkPVZ65';
     var encoded = encodeURIComponent(string1);
     $.ajax({
         url: "../class/test1.php",
